@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #ff6e7f, #bfe9ff);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            max-width: 600px;
+            text-align: center;
+        }
+        .container h2 {
+            margin-bottom: 30px;
+            font-size: 28px;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+            text-transform: uppercase;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+            margin-top: 5px;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+        .btn {
+            display: inline-block;
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none; /* Remove default link styling */
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .btn + a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007bff;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+        .btn + a:hover {
+            color: #0056b3;
+        }
+        .form-inline {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .form-inline .form-group {
+            width: calc(50% - 10px);
+        }
+        @media (max-width: 768px) {
+            .form-inline .form-group {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Student Registration</h2>
+    <form id="registrationForm" action="registration" class="form-inline">
+        <div class="form-group">
+            <label for="username">Full Name:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+       
+        <div class="form-group">
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname">
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="campus">Campus:</label>
+            <select id="campus" name="campus">
+                <option value="Lesotho">Lesotho</option>
+                <option value="Botswana">Botswana</option>
+                <option value="Swaziland">Swaziland</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="degree">Degree Level:</label>
+            <select id="degree" name="degree">
+                <option value="Masters">Masters Degree</option>
+                <option value="Degree">Bachelor's Degree</option>
+                <option value="Diploma">Diploma</option>
+                <option value="Certificate">Certificate</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="behavior">Behavioral Notes:</label>
+            <textarea id="behavior" name="behavior" ></textarea>
+        </div>
+
+        <button type="submit" class="btn">Register</button>
+    </form>
+</div>
+
+</body>
+</html>
